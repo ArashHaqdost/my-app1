@@ -1,7 +1,8 @@
 import React from 'react';
 import App  from './app';
 import ReactDOM  from 'react-dom';
+import  './product.css';
+// import 'bootstrap/dist/css/bootstrap.main.css';
+import Product from './components/product';
 
-const element = <h1>hello world</h1>
-
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Product/>, document.getElementById('root'));
