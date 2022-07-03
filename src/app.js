@@ -12,18 +12,18 @@ class App extends Component{
     }
 
 }
-// export default App;
+export default App;
 
 //Function based Component
 
-function Listt(){
-    return(
-        <ul>
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-        </ul>
-    );
-}
-export default (Listt);
+// function Listt(){
+//     return(
+//         <ul>
+//             <li>a</li>
+//             <li>b</li>
+//             <li>c</li>
+//             <li>d</li>
+//         </ul>
+//     );
+// }
+// export default (Listt);
