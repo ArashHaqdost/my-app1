@@ -1,14 +1,18 @@
 import  {Component} from 'react';
 
 class product extends Component{
-    count = 0;
+    //attributes
+    state ={
+        count : 0,
+        productName: 'laptop',
+    }
     imgUrl = "https://picsum.photos/200";
     render(){
         const list =['hellow react','hellow js', 'hello jsx'];
         const maplist = list.map((items)=> <li>items</li>);
         return(
             <>
-            <span>Product Name </span>
+            <span>{this.state.productName}  </span>
             <span>{this.format()}</span>
             <button onClick={this.handleIncrement.bind(this)}>+</button>
             <button onClick={this.handlDecrement}>-</button>
@@ -22,14 +26,14 @@ class product extends Component{
         );
     }
     format(){
-        if(this.count ===  0){
+        if(this.state.count ===  0){
             return <strong>xerow</strong>;
 
         }else
-        { return this.count;}
+        { return this.state.count;}
     }
     handleIncrement() {
-        console.log('incremetn',this)
+        this.setState({count : this.state.count +1});
         
        }
        handlDecrement = ()=>{
