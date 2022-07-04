@@ -1,49 +1,42 @@
-import  {Component} from 'react';
+import { Component } from "react";
+import '../product.css';
+
 
 class product extends Component{
-    //attributes
     state ={
-        count : 0,
-        productName: 'laptop',
+        count:0,
+        productName:'Laptop'
     }
-    imgUrl = "https://picsum.photos/200";
     render(){
-        const list =['hellow react','hellow js', 'hello jsx'];
-        const maplist = list.map((items)=> <li>items</li>);
-        return(
-            <>
-            <span>{this.state.productName}  </span>
-            <span>{this.format()}</span>
-            <button onClick={this.handleIncrement.bind(this)}>+</button>
-            <button onClick={this.handlDecrement}>-</button>
-            <button onClick={()=>{ this.hndleDelete(44)}}>Delete</button>
-            <ul>
-                {list.map((item,index) => <li key={index}>{item}</li>)}
-
-            </ul>
-            <img src={this.imgUrl}  alt="" />
-            </>
-        );
+        return(<>
+         <span className="mt-t text-info">{this.state.productName}</span>
+         <span style={{margin: "10px"}}>{this.format()}</span>
+         <button onClick={this.handleIncrese}>+</button>
+         <button onClick={this.handleDecrese}>-</button>
+         <button onClick={this.handleDelete}>Delete</button>
+        </>)
     }
     format(){
-        if(this.state.count ===  0){
-            return <strong>xerow</strong>;
+        if(this.state.count === 0){
+            return "zero";
 
-        }else
-        { return this.state.count;}
+        }else{
+            return this.state.count;
+        }
+
     }
-    handleIncrement() {
-        this.setState({count : this.state.count +1});
-        
-       }
-       handlDecrement = ()=>{
-        console.log('Decrement',this);
-       }
-       hndleDelete(itemnumber){
-        console.log(itemnumber)
-       }
-        
-    
+    handleIncrese= ()=>{
+        const {count}= this.state;
+        this.setState({count:count +1})
+
+    }
+    handleDecrese= ()=>{
+        const {count} = this.state;
+        this.setState({count: count -1});
+    }
+    handleDelete = ()=>{
+        console.log('Delete Items');
+    }
 }
 
 export default product;
