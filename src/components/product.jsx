@@ -2,41 +2,39 @@ import { Component } from "react";
 import '../product.css';
 
 
-class product extends Component{
-    state ={
-        count:0,
-        productName:'Laptop'
+class List extends Component{
+    state={
+        count: 0,
+        productName:"Laptop"
     }
+
     render(){
         return(<>
-         <span className="mt-t text-info">{this.state.productName}</span>
-         <span style={{margin: "10px"}}>{this.format()}</span>
-         <button onClick={this.handleIncrese}>+</button>
-         <button onClick={this.handleDecrese}>-</button>
-         <button onClick={this.handleDelete}>Delete</button>
+            <span>{this.state.productName}</span>
+            <span style={{margin: "10px"}}>{this.format()}</span>
+            <button onClick={this.increse}>+</button>
+            <button onClick={this.decrese}>-</button>
+            <button onClick={this.delete}>delete</button>
         </>)
     }
     format(){
-        if(this.state.count === 0){
-            return "zero";
-
+        if(this.state.count ===0){
+            return 'Zero';
         }else{
             return this.state.count;
         }
-
     }
-    handleIncrese= ()=>{
-        const {count}= this.state;
-        this.setState({count:count +1})
-
-    }
-    handleDecrese= ()=>{
+    increse = ()=>{
         const {count} = this.state;
-        this.setState({count: count -1});
+        this.setState({count: count + 1})
     }
-    handleDelete = ()=>{
-        console.log('Delete Items');
+    decrese = ()=>{
+        const {count}= this.state;
+        this.setState({count: count -1})
+    }
+    delete = ()=>{
+        return "delete";
     }
 }
 
-export default product;
+export default List;
