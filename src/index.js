@@ -1,12 +1,8 @@
-import React from 'react';
-// import App  from './app';
-import ReactDOM  from 'react-dom';
-import  './product.css';
-// import 'bootstrap/dist/css/bootstrap.main.css';
-// import Product from './components/functional/product';
-// import Products from "./components/functional/products"
-// import Product from './components/products';
-import App from './App';
+import React from "react";
+import ReactDOM  from "react-dom";
+import App from './app'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Prodcut from './Component/Product'
+// const element = <h1>hello world</h1>;
 
-
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Prodcut /> , document.getElementById('root'));
