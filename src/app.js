@@ -1,15 +1,15 @@
-import { Component } from "react";
-// class App extends Component{
-//     render(){
-//         return  <h1>hellow React</h1>
-//     }
-// }
 
 function App(){
-    return <>
-    <h1 className="p-2 text-danger">hello world</h1>
-    <p>this its isthi wusoadjlk
-    </p>
-    </>
+    return(<div>
+        <h1>My Todo</h1>
+        <div>
+        <h2>Title</h2>
+        <div>
+        <button>Delete</button>
+
+        </div>
+        </div>
+    </div>)
 }
-export default App;
+
+export default App();
